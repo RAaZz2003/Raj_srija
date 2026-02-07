@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rajkishor ❤️ Srija</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Georgia,serif}
+body{background:black;color:white;overflow-x:hidden}
+
+/* LOCK */
+.lock{
+  position:fixed;inset:0;background:black;
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  z-index:10000
+}
+.lock input{padding:10px;border-radius:8px;border:none;margin:10px}
+.lock button{padding:10px 25px;border-radius:20px;border:none}
+
+/* MUSIC */
+.music-btn{
+  position:fixed;top:15px;right:15px;
+  background:rgba(255,255,255,.2);
+  border:1px solid white;color:white;
+  padding:10px 15px;border-radius:30px;
+  cursor:pointer;z-index:999
+}
+
+/* SECTIONS */
+.section{
+  min-height:100vh;
+  display:flex;align-items:center;justify-content:center;
+  text-align:center;padding:60px 20px;
+  background-attachment:fixed
+}
+.content{
+  max-width:800px;
+  background:rgba(0,0,0,.4);
+  backdrop-filter:blur(6px);
+  padding:40px;border-radius:20px;
+  animation:fadeUp 1.2s ease
+}
+h1{font-size:2.6rem;margin-bottom:20px}
+p{font-size:1.25rem;line-height:1.7}
+
+/* BACKGROUNDS */
+.one{background:linear-gradient(120deg,#141E30,#243B55)}
+.two{background:linear-gradient(120deg,#42275a,#734b6d)}
+.three{background:linear-gradient(120deg,#614385,#516395)}
+.four{background:linear-gradient(120deg,#ff758c,#ff7eb3)}
+.five{background:linear-gradient(120deg,#000,#434343)}
+
+.propose-btn{
+  padding:15px 35px;
+  border:none;border-radius:40px;
+  background:crimson;color:white;
+  font-size:1.1rem;margin:10px;
+  cursor:pointer
+}
+#noBtn{background:#555}
+
+/* NO BUTTON RUN */
+#noBtn:hover{
+  position:absolute;
+  left:calc(10% + 80% * random());
+}
+
+/* RING */
+.ring{
+  position:fixed;font-size:4rem;
+  left:50%;bottom:-100px;
+  transform:translateX(-50%);
+  opacity:0;display:none;
+  animation:ring 2s forwards;
+  z-index:9999
+}
+@keyframes ring{to{bottom:50%;opacity:1}}
+
+/* CONFETTI */
+@keyframes fall{to{transform:translateY(110vh) rotate(720deg)}}
+
+/* SURPRISE */
+.surprise{
+  position:fixed;inset:0;
+  background:rgba(0,0,0,.9);
+  display:none;
+  align-items:center;justify-content:center;
+  flex-direction:column;text-align:center;
+  z-index:9999
+}
+
+/* HUG SCENE */
+.hug-scene{
+  position:fixed;inset:0;
+  background:rgba(0,0,0,.85);
+  display:none;
+  align-items:center;justify-content:center;
+  z-index:99999
+}
+.hug-box{
+  position:relative;width:300px;height:220px
+}
+.girl,.teddy{
+  position:absolute;bottom:0;
+  width:120px;
+  transition:1.2s ease
+}
+.girl{left:0}
+.teddy{right:0}
+.hug .girl{left:90px}
+.hug .teddy{right:90px;transform:scale(1.1)}
+
+/* BLUSH */
+.blush{
+  position:absolute;width:14px;height:14px;
+  background:pink;border-radius:50%;
+  opacity:0
+}
+.hug .blush{opacity:.8}
+
+/* HEARTS */
+.hearts span{
+  position:absolute;font-size:1.4rem;
+  animation:hearts 2.5s infinite;
+  opacity:0
+}
+@keyframes hearts{
+  0%{bottom:40px;opacity:0}
+  50%{opacity:1}
+  100%{bottom:160px;opacity:0}
+}
+
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(30px)}
+  to{opacity:1}
+}
+</style>
+</head>
+
+<body>
+
+<!-- LOCK -->
+<div class="lock" id="lock">
+  <h2>🔐 Only For Srija</h2>
+  <input id="pass" type="password" placeholder="Enter the secret">
+  <button onclick="unlock()">Enter</button>
+</div>
+
+<!-- MUSIC -->
+<audio id="bgMusic" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+<button class="music-btn" onclick="toggleMusic()">🎶 Music</button>
+
+<!-- RING -->
+<div class="ring" id="ring">💍</div>
+
+<!-- Confession -->
+<section class="section one">
+  <div class="content">
+    <h1>Hello my dear!!</h1>
+    <p>this is the small try from Rajkishor Kumar. my sweethear ❤️❤️💕 i love you a lot. .</p>
+  </div>
+</section>
+
+<section class="section two">
+  <div class="content">
+    <h1>The Connection</h1>
+    <p>Srija, Hum dono jb bhi sath hote hai mujhe samay ka kuchh pta nahi chlta hai mai humesha khush hota hoo </p>
+    <p> apne hone ka koi ahsah nahi hota hai mujhe aisa lgta hai mujhe mera sara jahan mil gya hai .</p>
+    <p>Mai tumhe apna saara janhan banana chahta hoo.
+        I love you so so much💕💕💕💕💕my dear😘😘😘😘
+    </p>
+  </div>
+</section>
+
+<section class="section three">
+  <div class="content">
+    <h1>The Comfort</h1>
+    <p>With you, silence feels safe and life feels lighter.</p>
+  </div>
+</section>
+
+<section class="section four">
+  <div class="content">
+    <h1>The Love</h1>
+    <p>Loving you feels like home — and I want that home forever.</p>
+  </div>
+</section>
+
+<section class="section five">
+  <div class="content">
+    <h1>Srija ❤️</h1>
+    <p>— Yours, Rajkishor</p>
+    <button class="propose-btn" onclick="sayYes()">💍 Say Yes?</button>
+    <button id="noBtn" class="propose-btn">💔 No</button>
+  </div>
+</section>
+
+<!-- SURPRISE -->
+<div class="surprise" id="surprise">
+  <h1>Forever Begins Now 💖</h1>
+  <p>I promise to choose you every single day.</p>
+</div>
+
+<!-- TEDDY HUG -->
+<div class="hug-scene" id="hugScene">
+  <div class="hug-box" id="hugBox">
+
+    <!-- GIRL SVG -->
+    <svg class="girl" viewBox="0 0 100 160">
+      <circle cx="50" cy="30" r="20" fill="#ffcccb"/>
+      <rect x="30" y="50" width="40" height="80" rx="20" fill="#ff99aa"/>
+    </svg>
+
+    <!-- TEDDY SVG -->
+    <svg class="teddy" viewBox="0 0 120 160">
+      <circle cx="60" cy="40" r="30" fill="#c49a6c"/>
+      <circle cx="35" cy="30" r="10" fill="#c49a6c"/>
+      <circle cx="85" cy="30" r="10" fill="#c49a6c"/>
+      <rect x="30" y="70" width="60" height="80" rx="30" fill="#c49a6c"/>
+    </svg>
+
+    <!-- BLUSH -->
+    <div class="blush" style="left:170px;bottom:110px"></div>
+    <div class="blush" style="left:190px;bottom:110px"></div>
+
+    <!-- HEARTS -->
+    <div class="hearts">
+      <span style="left:45%">💗</span>
+      <span style="left:55%">💖</span>
+      <span style="left:50%">💕</span>
+    </div>
+
+  </div>
+</div>
+
+<script>
+/* PASSWORD */
+function unlock(){
+  if(pass.value.toLowerCase()==="srija")
+    lock.style.display="none";
+  else alert("Wrong password 💔");
+}
+
+/* MUSIC */
+let playing=false;
+function toggleMusic(){
+  playing?bgMusic.pause():bgMusic.play();
+  playing=!playing;
+}
+
+/* CONFETTI */
+function launchConfetti(){
+  for(let i=0;i<120;i++){
+    let c=document.createElement("div");
+    c.style.position="fixed";
+    c.style.left=Math.random()*100+"vw";
+    c.style.top="-10px";
+    c.style.width="8px";
+    c.style.height="8px";
+    c.style.background=`hsl(${Math.random()*360},100%,50%)`;
+    c.style.animation="fall 3s linear";
+    document.body.appendChild(c);
+    setTimeout(()=>c.remove(),3000);
+  }
+}
+
+/* NO BUTTON RUN */
+noBtn.onmouseover=()=>{
+  noBtn.style.position="absolute";
+  noBtn.style.left=Math.random()*80+"vw";
+  noBtn.style.top=Math.random()*80+"vh";
+}
+
+/* YES */
+function sayYes(){
+  launchConfetti();
+  ring.style.display="block";
+
+  bgMusic.currentTime=0;
+  bgMusic.volume=0.9;
+  bgMusic.play();
+
+  setTimeout(()=>{
+    hugScene.style.display="flex";
+    hugBox.classList.add("hug");
+  },1200);
+
+  window.open(
+    "https://wa.me/?text="+encodeURIComponent(
+      "Yes ❤️ I choose you, Rajkishor. Forever starts now."
+    ),
+    "_blank"
+  );
+
+  setTimeout(()=>{
+    surprise.style.display="flex";
+  },4200);
+}
+</script>
+
+</body>
+</html>
